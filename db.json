@@ -35,6 +35,14 @@
       "telefono": 1398198938,
       "email": "pedro@correo.com",
       "empresa": "Meta"
+    },
+    {
+      "nombre": "Jorge Solano",
+      "empresa": "Solano's Company",
+      "email": "jorge@gmail.com",
+      "telefono": "12345678",
+      "notas": "Este es un cliente de prueba.",
+      "id": 6
     }
   ]
 }
