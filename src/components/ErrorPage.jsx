@@ -11,7 +11,9 @@ const ErrorPage = () => {
       <p className="text-center font-bold text-red-800 text-3xl uppercase">
         Error
       </p>
-      <p className="text-center font-bold">{error.message}</p>
+      <p className="text-center font-bold">
+        {error.statusText || error.message}
+      </p>
     </div>
   );
 };

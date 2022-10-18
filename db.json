@@ -1,11 +1,12 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nombre": "Juan",
-      "telefono": 102013313,
-      "email": "juan@correo.com",
-      "empresa": "Microsoft"
+      "nombre": "Esteban",
+      "empresa": "Microsoft",
+      "email": "esteban@correo.com",
+      "telefono": "102013313",
+      "notas": "Actualizando Cliente, esto es una prueba.",
+      "id": 1
     },
     {
       "id": 2,

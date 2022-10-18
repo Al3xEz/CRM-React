@@ -2,8 +2,17 @@ import { useLoaderData } from "react-router-dom";
 import Cliente from "../components/Cliente";
 import { obtenerClientes } from "../data/Clientes";
 
-export function clientesLoader() {
-  return obtenerClientes();
+export async function clientesLoader() {
+  try {
+    const clientes = await obtenerClientes();
+    return clientes;
+  } catch (error) {
+    console.log(error);
+    throw new Response("", {
+      status: 404,
+      statusText: "Error 404 | No hay resultados",
+    });
+  }
 }
 
 const Index = () => {
@@ -12,7 +21,7 @@ const Index = () => {
   return (
     <>
       <h1 className="font-black text-4xl text-slate-800">Clientes</h1>
-      <p className="mt-3">Administra tus clientes</p>
+      <p className="mt-3 text-lg">Administra tus clientes</p>
 
       {clientes.length > 0 ? (
         <table className="w-full bg-white shadow mt-5 table-auto">
